@@ -1,0 +1,30 @@
+import java.io.file;
+import java.io.IOException;
+import java.io.FileUtils;
+import java.selenium.TakesScreenshot;
+import java.selenium.WebDriver;
+import java.selenium.OutputType;
+
+
+public class ScreenCapture
+
+public static void main [String args]
+{
+	
+	@Test
+	public void captureScreen()
+	{
+		driver.get("www.google.com");
+		File picture = ((TakesScreenshot)driver).getScreenshotAs(OutputType);
+		
+		try
+		{
+			FileUtils.copyFile(picture, new File("C:/google.png"));
+		}
+		
+		catch (IOException e)
+		{
+			System.out.println(e.getMessage("Screenshot not captured"));
+		}
+	}
+}

@@ -1,0 +1,37 @@
+import java.io.FileUtils;
+import java.selenium.Xpath;
+import java.selenium.WebDriver;
+import java.selenium.OutputType;
+
+public class Transverse
+
+public static void main String [args]
+{
+	String path = "//path";
+	String value = ".//value";
+	
+	XPathFactory xPathFactory = XPathFactory.newInstance();
+	XPath xpath = xPathFactory.newXPath();
+	String list;
+	public XpathList(String file) throws IOException
+	{
+		NodeList node = getNodeList(list, path);
+		for (int i = 0; i < node.getLength(); i++)
+		{
+			System.out.println(getValue(node.item(i), value));
+		}
+	}
+	
+	public NodeList getNodeList(String list, String xpathCompile)
+	{
+		try
+		{
+			XPathExpression pathXpath = XPathExpression.compile(xpathCompile);
+		}
+		
+		Catch (IOException e)
+		{
+			System.out.println(e.getMessage("Could not transverse list"));
+		}
+	}
+}
